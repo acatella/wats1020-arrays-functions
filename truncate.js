@@ -20,7 +20,8 @@ truncateWords(originalText,wordLimit);
 
 
 //object constructor
-function sentence(original,wordCount,limit,shortened) {
+function sentence(name,original,wordCount,limit,shortened) {
+  this.name = name;
   this.originalText = original;
   this.wordCount = wordCount;
   this.numWords = limit;
@@ -28,6 +29,10 @@ function sentence(original,wordCount,limit,shortened) {
 }
 
 function truncateWords(str, limit) {
+  //handle limit argument input errors
+  if (!limit) {
+    limit = 5;
+  }
   //build arrays and word count
   var words = str.split(" ");
   var wordCount = words.length;
@@ -44,7 +49,8 @@ function truncateWords(str, limit) {
   shortened = shortened.join(" ");
 
   //build object to return
-  var strObj = new sentence(str,wordCount,limit,shortened);
+  var objName = 'sentence_' + wordLimit;
+  var strObj = new sentence(objName,str,wordCount,limit,shortened);
   for (prop in strObj) {
     document.write(prop + ": " + strObj[prop] + "<br>");
   }
