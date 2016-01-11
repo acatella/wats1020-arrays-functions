@@ -30,9 +30,10 @@ function sentence(name,original,wordCount,limit,shortened) {
 
 function truncateWords(str, limit) {
   //handle limit argument input errors
-  if (!limit) {
+  if (!limit || limit == undefined) {
     limit = 5;
   }
+
   //build arrays and word count
   var words = str.split(" ");
   var wordCount = words.length;
