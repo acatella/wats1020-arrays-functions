@@ -17,7 +17,7 @@ function sentence(name,original,wordCount,limit,shortened) {
 
 function truncateWords(str, limit) {
   //handle limit argument input errors
-  if (!limit || limit == undefined) {
+  if (!limit || limit == undefined || limit < 0) {
     limit = 5;
   }
 
