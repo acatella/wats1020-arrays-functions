@@ -1,4 +1,4 @@
-//Afi C. Clark's assingment below
+//Afi C. Clark's assignment below
 
 //define input variables
 var originalText = "There are two hard things in Computer Science: Cach invalidation, naming things, and off-by-one errors.";
