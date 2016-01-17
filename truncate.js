@@ -52,7 +52,7 @@ function truncateWords(str, limit) {
 
 //this function will only return the truncated string
 function truncateCharacters(str, limit) {
-  if (!limit || limit == undefined) {
+  if (!limit || limit == undefined || limit < 0) {
     limit = 25;
   }
 
